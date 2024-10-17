@@ -17,8 +17,6 @@ export function execute(interaction, queue) {
   const level = Math.max(queue.node.volume - 10, 0);
 
   queue.node.setVolume(level);
-
-  return interaction.reply({
-    embeds: [SuccessEmbed(`Volume decreased to ${level}%.`)],
-  });
+  
+  return interaction.deferUpdate().catch(console.error);
 }

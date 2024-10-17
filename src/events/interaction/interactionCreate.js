@@ -48,7 +48,7 @@ export async function execute(interaction) {
 
   const now = Date.now();
   const timestamps = cooldowns.get(commandName);
-  const defaultCooldownDuration = 3;
+  const defaultCooldownDuration = 1;
   const cooldownAmount =
     (command.data.cooldown ?? defaultCooldownDuration) * 1000;
 

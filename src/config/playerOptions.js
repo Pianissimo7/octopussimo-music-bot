@@ -1,7 +1,7 @@
 import { QueueRepeatMode } from "discord-player";
 
 const playerOptions = {
-  volume: 70,
+  volume: 60,
   repeatMode: QueueRepeatMode.AUTOPLAY,
   noEmitInsert: true,
   leaveOnStop: false,
