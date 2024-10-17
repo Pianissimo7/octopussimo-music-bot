@@ -14,9 +14,6 @@ RUN apt-get update && \
 # Clone the project
 RUN git clone https://github.com/Pianissimo7/octopussimo-music-bot.git .
 
-# Install necessary dependencies only
-RUN npm ci --omit=dev --omit=optional
-
 # Install extre dependencies
 RUN npm install mediaplex
 RUN apt-get install -y --no-install-recommends ffmpeg
