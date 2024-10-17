@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20-bookworm-slim
+ARG NODE_VERSION=20-alpine
 
 # Use Node image
 FROM node:${NODE_VERSION}
@@ -7,7 +7,7 @@ FROM node:${NODE_VERSION}
 WORKDIR /app
 
 # Clone the project
-RUN git clone https://github.com/Pianissimo7/octopussimo-music-bot.git
+RUN git clone https://github.com/Pianissimo7/octopussimo-music-bot.git .
 
 # Install necessary dependencies only
 RUN npm ci --omit=dev --omit=optional
