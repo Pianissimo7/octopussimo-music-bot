@@ -1,4 +1,4 @@
-ARG NODE_VERSION=18-buster
+ARG NODE_VERSION=23-alpine
 
 # Use Node image
 FROM node:${NODE_VERSION}
