@@ -1,7 +1,7 @@
-ARG NODE_VERSION=23-alpine
+ARG NODE_VERSION=20-buster
 
 # Use Node image
-FROM node:${NODE_VERSION}
+FROM --platform=win32/x64 node:${NODE_VERSION}
 
 # Set the working directory inside the container
 WORKDIR /app
