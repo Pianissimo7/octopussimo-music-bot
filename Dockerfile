@@ -1,12 +1,12 @@
-ARG NODE_VERSION=lts-alpine
+ARG NODE_VERSION=18-buster
 
 # Use Node image
-FROM --platform=linux/amd64 node:${NODE_VERSION}
+FROM node:${NODE_VERSION}
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Install necessary packages for mediaplex and ffmpeg
+# Install git
 RUN apt-get update && \
     apt-get install -y git && \
     rm -rf /var/lib/apt/lists/*
