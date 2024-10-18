@@ -1,4 +1,4 @@
-ARG NODE_VERSION=18-buster
+ARG NODE_VERSION=lts-alpine
 
 # Use Node image
 FROM --platform=linux/amd64 node:${NODE_VERSION}
