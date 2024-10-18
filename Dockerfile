@@ -1,15 +1,13 @@
-ARG NODE_VERSION=20-bookworm-slim
+ARG NODE_VERSION=8.15-alpine
 
 # Use Node image
 FROM node:${NODE_VERSION}
 
+# Install Git
+RUN apk --no-cache add git
+
 # Set the working directory inside the container
 WORKDIR /app
-
-# Install Git
-RUN apt-get update && \
-    apt-get install -y git && \
-    rm -rf /var/lib/apt/lists/*
 
 # Clone the project
 RUN git clone https://github.com/Pianissimo7/octopussimo-music-bot.git .
